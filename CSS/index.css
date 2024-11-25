@@ -24,6 +24,58 @@ body {
     text-align: center;
 }
 
+/* Navigation Bar Styles */
+.navbar {
+    display: flex;
+    justify-content: center; /* Align links at the center */
+    background-color: #FF69B4; /* Matches the site's pink theme */
+    padding: 10px 0;
+    position: sticky; /* Keeps the navbar visible at the top when scrolling */
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s ease;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background-color: #FF1493; /* Darker pink on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* General navbar link styles */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 3px solid transparent; /* Invisible underline */
+    transition: background-color 0.3s, border-bottom 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #FF1493; /* Darker pink on hover */
+    border-bottom: 3px solid white; /* Add underline on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Highlight the active page */
+.navbar a.active {
+    border-bottom: 3px solid white; /* White underline for the active page */
+    font-weight: bold; /* Optional: Make it visually distinct */
+}
+
+
+
+
 /* Page Title */
 .page-title {
     font-size: 2em;
@@ -150,4 +202,31 @@ input[type="submit"]:hover {
     display: block;
     margin: 50px auto 20px auto; /* Adds more space above */
     margin-top: 200px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center;
+    }
+    .navbar a {
+        padding: 10px;
+        width: 100%; /* Make links take the full width */
+        text-align: center;
+    }
+}
+
+.stream-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    border: 4px solid pink;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+iframe {
+    max-width: 100%;
+    border-radius: 10px;
 }
