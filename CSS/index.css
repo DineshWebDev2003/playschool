@@ -9,7 +9,7 @@ body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     background-color: #f7f7f7;
     color: #333;
-    background-image: url(CSS/images/backround.svg);
+    background-image: url(/CSS/images/backround.svg);
     background-repeat: no-repeat;
     background-size: cover;      /* Makes the background image cover the entire page */
     background-position: center; /* Centers the image */
