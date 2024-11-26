@@ -1,0 +1,339 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    background-image: url('images/background.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Container Styles */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #FF69B4; /* Pink color */
+    padding: 10px 0;
+    position: sticky; /* Sticks to the top when scrolling */
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background-color: #FF1493; /* Darker pink on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+.navbar a.active {
+    border-bottom: 3px solid white; /* White underline for active link */
+    font-weight: bold;
+}
+
+/* Page Title */
+.page-title {
+    font-size: 2em;
+    color: #FF69B4; /* Pink color */
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #FF69B4;
+    color: white;
+    border-radius: 8px;
+}
+
+/* Login Box Centering */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;  /* Align items at the top instead of the center */
+    height: 100vh;
+    padding-top: 50px;  /* Adds space from the top */
+}
+
+.login-box {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+    min-width: 300px;
+    text-align: left;
+    border: 4px solid #FF69B4;
+}
+
+
+/* Login Box Header */
+.login-box h2 {
+    color: #FF69B4;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+/* Input fields styling */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+input[type="submit"] {
+    background-color: #FF69B4;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #FF1493;
+}
+
+/* Live Monitoring Box */
+.stream-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    border: 4px solid pink;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+iframe {
+    max-width: 100%;
+    height: 80%; /* Adjust the height of the live stream */
+    border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px; /* Reduced margin to pull the footer closer */
+    font-size: 0.9em;
+    text-align: center;
+    color: #666;
+    background-color: #f1f1f1;
+    padding: 20px 0;
+    position: relative;
+    clear: both; /* Ensures the footer stays below the content */
+}
+
+.footer p {
+    line-height: 1.5;
+}
+
+.footer a {
+    color: #FF69B4;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center;
+    }
+
+    .navbar a {
+        padding: 10px;
+        width: 100%; /* Make links take the full width */
+        text-align: center;
+    }
+
+    .login-box {
+        width: 90%;
+    }
+
+    .stream-container {
+        width: 90%;
+    }
+
+    .page-title {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.3em;
+    }
+
+    .message {
+        font-size: 1em;
+    }
+
+    input[type="submit"] {
+        font-size: 0.9em;
+    }
+}
+
+/* Message Styling */
+.message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+}
+
+.message.success {
+    color: green;
+    border-color: green;
+}
+
+.message.error {
+    color: red;
+    border-color: red;
+}
+
+/* Unique animation for Kolathur H1 */
+@keyframes bounceIn {
+    0% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(30px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Animation for changing colors */
+@keyframes colorChange {
+    0% {
+        color: #FF5733; /* Red */
+    }
+    25% {
+        color: #33FF57; /* Green */
+    }
+    50% {
+        color: #3357FF; /* Blue */
+    }
+    75% {
+        color: #FF33A1; /* Pink */
+    }
+    100% {
+        color: #FF5733; /* Red */
+    }
+}
+
+/* Apply animation to the Kolathur header */
+h1.page-title.kolathur {
+    animation: bounceIn 1.5s ease-out, colorChange 3s infinite; /* Add the color change animation */
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto; /* Push it to the right */
+    padding: 10px;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #FF69B4; /* Same as navbar */
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.mobile-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+.mobile-menu a:hover {
+    background-color: #FF1493;
+}
+
+/* Show hamburger and hide desktop menu on smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navbar a {
+        display: none; /* Hide links in navbar */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon */
+    }
+}
+
+/* Active Mobile Menu */
+.mobile-menu.active {
+    display: flex;
+}
