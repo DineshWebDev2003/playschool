@@ -172,31 +172,8 @@ iframe {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Stack links vertically */
-        align-items: center;
-    }
 
-    .navbar a {
-        padding: 10px;
-        width: 100%; /* Make links take the full width */
-        text-align: center;
-    }
-
-    .login-box {
-        width: 90%;
-    }
-
-    .stream-container {
-        width: 90%;
-    }
-
-    .page-title {
-        font-size: 1.5em;
-    }
-}
-
+/* Mobile Devices (up to 480px) */
 @media (max-width: 480px) {
     .page-title {
         font-size: 1.3em;
@@ -209,46 +186,140 @@ iframe {
     input[type="submit"] {
         font-size: 0.9em;
     }
+
+    .login-box {
+        width: 90%; /* Ensures form fits within small screens */
+        padding: 15px; /* Reduces padding for small screens */
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        display: none; /* Hide links on mobile */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon */
+    }
+
+    .stream-container {
+        width: 100%; /* Stream container adjusts for smaller width */
+    }
+
+    iframe {
+        height: 300px; /* Adjusts iframe height for smaller devices */
+    }
 }
 
+/* Tablets (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navbar a {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex; /* Keep hamburger for tablets */
+    }
+
+    .login-box {
+        width: 80%;
+    }
+
+    .page-title {
+        font-size: 1.5em;
+    }
+
+    .stream-container {
+        width: 90%;
+    }
+}
+
+/* Small Laptops and Desktops (769px to 1023px) */
+@media (min-width: 769px) and (max-width: 1023px) {
+    .navbar a {
+        display: block; /* Show navbar links */
+        padding: 10px 15px; /* Adjust padding for smaller desktops */
+    }
+
+    .login-box {
+        width: 70%; /* Slightly wider form */
+    }
+
+    .page-title {
+        font-size: 2em;
+    }
+
+    .stream-container {
+        width: 80%;
+    }
+}
+
+/* Large Screens (1024px and up) */
 @media (min-width: 1024px) {
     .container {
         width: 80%;
     }
 
+    .navbar a {
+        display: block;
+        font-size: 18px; /* Larger text for readability */
+    }
+
     .login-box {
-        width: 450px; /* Slightly wider for larger screens */
+        width: 450px; /* Fixed width for larger screens */
         padding: 30px;
     }
 
-    .navbar a {
-        font-size: 20px; /* Larger text for desktop view */
-        padding: 15px 25px;
+    .stream-container {
+        width: 70%; /* Better alignment on wider screens */
     }
 
     .page-title {
-        font-size: 3em;
+        font-size: 2.5em;
     }
 
-    .stream-container {
-        width: 80%; /* Wider for desktop */
+    iframe {
+        height: 500px; /* Larger iframe for desktop view */
     }
 }
 
+/* Ultra-Wide Screens (1440px and above) */
 @media (min-width: 1440px) {
     .container {
         max-width: 1400px;
     }
 
     .login-box {
-        width: 500px;
+        width: 500px; /* Wider form for ultra-wide screens */
+    }
+
+    .page-title {
+        font-size: 3em;
+    }
+}
+
+/* Extremely Large Screens (1920px and above) */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1800px;
     }
 
     .page-title {
         font-size: 3.5em;
     }
-}
 
+    iframe {
+        height: 700px; /* Maximize iframe for ultra-wide displays */
+    }
+}
 
 /* Message Styling */
 .message {
