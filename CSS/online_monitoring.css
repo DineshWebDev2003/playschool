@@ -211,6 +211,45 @@ iframe {
     }
 }
 
+@media (min-width: 1024px) {
+    .container {
+        width: 80%;
+    }
+
+    .login-box {
+        width: 450px; /* Slightly wider for larger screens */
+        padding: 30px;
+    }
+
+    .navbar a {
+        font-size: 20px; /* Larger text for desktop view */
+        padding: 15px 25px;
+    }
+
+    .page-title {
+        font-size: 3em;
+    }
+
+    .stream-container {
+        width: 80%; /* Wider for desktop */
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .login-box {
+        width: 500px;
+    }
+
+    .page-title {
+        font-size: 3.5em;
+    }
+}
+
+
 /* Message Styling */
 .message {
     margin-top: 20px;
@@ -336,4 +375,28 @@ h1.page-title.kolathur {
 /* Active Mobile Menu */
 .mobile-menu.active {
     display: flex;
+}
+
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"]:hover {
+    background-color: #FF004F; /* Brighter pink */
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0px 4px 8px rgba(255, 20, 147, 0.4);
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+.login-box.dark-mode {
+    background-color: #444;
+    color: white;
+}
+
+.navbar.dark-mode a {
+    color: #ddd;
 }
